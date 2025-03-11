@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+     <link rel="stylesheet" href="css\estilos.css"/>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+   
+    <title>Productos Organicos</title>
+  </head>
+<body style="background-color: #cad2c5">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">Home</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="#">Promociones</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Nuevos Productos</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link disabled">Administrador</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+    <h1>Selecciona el producto que deseas adquirir</h1>
+    <div id="imageContainer"></div>
+    <script>
+        // Función para mostrar imágenes de forma creativa
+        function mostrarImagenes() {
+            // Lista de imágenes (rutas relativas o absolutas)
+            const imagenes = [
+                "img/frutas_y_verduras.jpg",
+                "img/cereales.jpg",
+                "img/semillas.jpg",
+                "img/limpieza.jpg"
+            ];
+
+            // Obtener el contenedor de imágenes
+            const imageContainer = document.getElementById('imageContainer');
+
+            // Limpiar el contenedor de imágenes (por si ya había contenido)
+            imageContainer.innerHTML = "";
+
+            // Recorrer la lista de imágenes y agregarlas al contenedor
+            imagenes.forEach((imagen) => {
+                const imgElement = document.createElement('img');
+                imgElement.src = imagen;
+                imgElement.alt = "Imagen";
+                imageContainer.appendChild(imgElement);
+            });
+        }
+
+        // Llamar a la función para mostrar imágenes al cargar la página
+        mostrarImagenes();
+    </script>
+    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+</body>
+</html>
